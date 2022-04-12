@@ -30,8 +30,7 @@ Please enter your choice: """)
         if num_rows > 1: leaderboard[0], leaderboard[1] = zip(*sorted(list(zip(leaderboard[0],leaderboard[1])),key=lambda x: x[1], reverse=True))
         for n in range(2): leaderboard[n] = list(leaderboard[n]) 
         for l in range(len(leaderboard[0])): print(f"{leaderboard[0][l]}\t\t{leaderboard[1][l]}")
-        if len(leaderboard[0]) == 0:
-            print("-----------\t-----\n")
+        if len(leaderboard[0]) == 0: print("-----------\t-----\n")
         for l,n in zip(("X","O"),(0,1)):
             while p[n] == 0:
                 p[n] = input(f"Who will be {l}? ")
